@@ -84,7 +84,7 @@ class Login extends Component {
         <footer className='row justify-content-center'>
           <div className='col-md-11'>
             <div className='login-copyright mt-4'>
-              Copyright © 2019 Merkato, 2019 - 2019.
+              Copyright © 2021 Merkato, 2021 - 2021.
             </div>
 
             <div className='login-reserved mb-4'>All Rights Reserved.</div>

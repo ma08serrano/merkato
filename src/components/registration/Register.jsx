@@ -164,7 +164,7 @@ class Register extends Component {
 
         <footer className='register-footer mt-4 mb-4'>
           <div className='row justify-content-center'>
-            Copyright © 2019 Merkato, 2019 - 2019. All Rights Reserved.
+            Copyright © 2021 Merkato, 2021 - 2021. All Rights Reserved.
           </div>
         </footer>
       </div>
