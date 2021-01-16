@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Product from './Product';
 import data from '../../data';
 
 class Home extends Component {
@@ -69,37 +70,7 @@ class Home extends Component {
             <div className='row section-items'>
               {
                 data.products.map((product) => (
-                  
-                    <div className='col-md-3'>
-                      <a href='#'>
-                        <div className='item'>
-                          <div className='item-img'>
-                            <img src={product.image} />
-                          </div>
-                          <div className='item-name pt-2'>
-                            <h4>{product.name}</h4>
-                          </div>
-                          <div className="rating">
-                            <span>
-                              <i className="fa fa-star"></i>
-                            </span>
-                            <span>
-                              <i className="fa fa-star"></i>
-                            </span>
-                            <span>
-                              <i className="fa fa-star"></i>
-                            </span>
-                            <span>
-                              <i className="fa fa-star"></i>
-                            </span>
-                            <span>
-                              <i className="fa fa-star"></i>
-                            </span>
-                          </div>
-                          <div className='item-price'>${product.price}</div>
-                        </div>
-                      </a>
-                    </div>
+                  <Product key={product.id} product={product}></Product>
                 ))
               }
             </div>
