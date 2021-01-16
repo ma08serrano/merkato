@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-
-import logo from '../../img/images/merkato.svg';
-import search from '../../img/images/search.svg';
-import cart from '../../img/images/cart.svg';
-import hero_banner from '../../img/images/hero_banner.jpg';
-import facebook from '../../img/images/facebook.svg';
-import twitter from '../../img/images/twitter.svg';
-import instagram from '../../img/images/instagram.svg';
-
-import items_1 from '../../img/items/items_1.jpg';
-import items_2 from '../../img/items/items_2.jpg';
-import items_3 from '../../img/items/items_3.jpg';
-import items_4 from '../../img/items/items_4.jpg';
-import items_5 from '../../img/items/items_5.jpg';
-import items_6 from '../../img/items/items_6.jpg';
-import items_7 from '../../img/items/items_7.jpg';
-import items_8 from '../../img/items/items_8.jpg';
+import data from '../../data';
 
 class Home extends Component {
   render() {
@@ -24,7 +8,7 @@ class Home extends Component {
         <div className='row store-header'>
           <div className='col-md-2 store-logo'>
             <a href='#'>
-              <img src={logo} alt='Merkato' width='180px' />
+              <img src="./img/images/merkato.svg" alt='Merkato' width='180px' />
             </a>
           </div>
 
@@ -60,17 +44,17 @@ class Home extends Component {
 
           <div className='col-md-2 store-action'>
             <a href='#'>
-              <img src={search} alt='Search' width='24px' />
+              <img src="./img/images/search.svg" alt='Search' width='24px' />
             </a>
             <a href='#'>
-              <img src={cart} alt='Cart' width='24px' />
+              <img src="./img/images/cart.svg" alt='Cart' width='24px' />
             </a>
           </div>
         </div>
 
         <div className='row store-herobanner'>
           <div className='col'>
-            <img src={hero_banner} alt='Hero Banner' />
+            <img src="./img/images/hero_banner.jpg" alt='Hero Banner' />
           </div>
         </div>
 
@@ -83,177 +67,41 @@ class Home extends Component {
             </div>
 
             <div className='row section-items'>
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_1} />
+              {
+                data.products.map((product) => (
+                  
+                    <div className='col-md-3'>
+                      <a href='#'>
+                        <div className='item'>
+                          <div className='item-img'>
+                            <img src={product.image} />
+                          </div>
+                          <div className='item-name pt-2'>
+                            <h4>{product.name}</h4>
+                          </div>
+                          <div className="rating">
+                            <span>
+                              <i className="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i className="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i className="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i className="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i className="fa fa-star"></i>
+                            </span>
+                          </div>
+                          <div className='item-price'>${product.price}</div>
+                        </div>
+                      </a>
                     </div>
-                    <div className='item-name pt-2'>
-                      <h4>Sample Item 1</h4>
-                    </div>
-                    <div className='item-price'>$99.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_2} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Greentea sales high quality korean knitting dress</h4>
-                    </div>
-                    <div className='item-price'>$89.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_3} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Sweater sexy Long Sleeve Striped Dress</h4>
-                    </div>
-                    <div className='item-price'>$119.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_4} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Boho sexy white blouse</h4>
-                    </div>
-                    <div className='item-price'>$129.00</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className='row section-items'>
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_4} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Square waist pants terno pants</h4>
-                    </div>
-                    <div className='item-price'>$99.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_5} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Boho women summer beach</h4>
-                    </div>
-                    <div className='item-price'>$89.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_6} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Korean summer bodycon sleeveless sexy dress</h4>
-                    </div>
-                    <div className='item-price'>$119.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_7} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Korean sexy bodycon mini formal dress</h4>
-                    </div>
-                    <div className='item-price'>$129.00</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className='row section-items'>
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_8} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Sample Item 1</h4>
-                    </div>
-                    <div className='item-price'>$99.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_1} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Greentea sales high quality korean knitting dress</h4>
-                    </div>
-                    <div className='item-price'>$89.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_2} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Sweater sexy Long Sleeve Striped Dress</h4>
-                    </div>
-                    <div className='item-price'>$119.00</div>
-                  </div>
-                </a>
-              </div>
-
-              <div className='col-md-3'>
-                <a href='#'>
-                  <div className='item'>
-                    <div className='item-img'>
-                      <img src={items_3} />
-                    </div>
-                    <div className='item-name pt-2'>
-                      <h4>Boho sexy white blouse</h4>
-                    </div>
-                    <div className='item-price'>$129.00</div>
-                  </div>
-                </a>
-              </div>
+                ))
+              }
             </div>
 
             <div className='row section-loadmore'>
@@ -270,18 +118,18 @@ class Home extends Component {
               <div className='row'>
                 <div className='col-md-6'>
                   <a href='#'>
-                    <img src={logo} alt='Merkato' width='240px' />
+                    <img src="./img/images/merkato.svg" alt='Merkato' width='240px' />
                   </a>
 
                   <div className='social-links'>
                     <a href='#'>
-                      <img src={facebook} width='32px' alt='Facebook' />
+                      <img src="./img/images/facebook.svg" width='32px' alt='Facebook' />
                     </a>
                     <a href='#'>
-                      <img src={twitter} width='32px' alt='Twitter' />
+                      <img src="./img/images/twitter.svg" width='32px' alt='Twitter' />
                     </a>
                     <a href='#'>
-                      <img src={instagram} width='32px' alt='Instagram' />
+                      <img src="./img/images/instagram.svg" width='32px' alt='Instagram' />
                     </a>
                   </div>
                 </div>
